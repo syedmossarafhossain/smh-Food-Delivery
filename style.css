@@ -68,7 +68,10 @@ img {
 
 .text-center {
     text-align: center;
-    
+}
+
+.mt-4 {
+    margin-top: 4rem;
 }
 
 /* HEADER STYLING */
@@ -132,7 +135,8 @@ img {
 }
 
 .content,
-.image-container {
+.image-container,
+.service-card {
     flex: 1;
     flex-basis: 300px;
 }
@@ -190,6 +194,16 @@ h2 {
     color: var(--leed);
 }
 
+h3 {
+    font-size: 2rem;
+    text-transform: capitalize;
+    color: var(--leed);
+}
+
+.service-card h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
 
 
 
