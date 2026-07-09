@@ -62,6 +62,15 @@ img {
     display: block;
 }
 
+.p-top {
+    padding-top: 10rem;
+}
+
+.text-center {
+    text-align: center;
+    
+}
+
 /* HEADER STYLING */
 
 .navbar {
