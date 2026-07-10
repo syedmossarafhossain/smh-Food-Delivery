@@ -205,7 +205,58 @@ h3 {
     margin-bottom: 1rem;
 }
 
+/* SECTION 2 */
 
+.order-card {
+    flex: 1;
+    flex-basis: 300px;
+    background: var(--pure-white);
+    border: .1rem solid var(--gold-finger);
+    padding: 0 1rem 2rem 1rem;
+    border-radius: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.05) 8px 8px 8px,
+        rgba(0, 0, 0, 0.05) 8px 8px 8px inset;
+}
+
+.order-card img {
+    width: 15rem;
+    filter: drop-shadow(rgba(0, 0, 0, 0.4) 0 10px 10px);
+}
+
+h4 {
+    font-size: 1.8rem;
+    color: var(--leed);
+}
+
+.order-card .price {
+    font-size: 1.7rem;
+    color: var(--gold-finger);
+    padding: 1.3rem 0 2rem 0;
+}
+
+/* SECTION 3 */
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.profile {
+    width: 4rem;
+    aspect-ratio: 1;
+    border-radius: 100vw;
+    overflow: hidden;
+}
+
+.profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.fa-star {
+    color: var(--gold-finger);
+}
 
 
 
