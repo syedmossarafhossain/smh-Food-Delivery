@@ -74,6 +74,10 @@ img {
     margin-top: 4rem;
 }
 
+.mt-half {
+    margin-top: .5rem;
+}
+
 /* HEADER STYLING */
 
 .navbar {
