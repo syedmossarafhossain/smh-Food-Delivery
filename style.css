@@ -240,6 +240,12 @@ h4 {
 
 /* SECTION 3 */
 
+.review-container {
+    width: 650px;
+    max-width: 100%;
+    flex: 1;
+}
+
 .swiper {
     width: 100%;
     height: 100%;
