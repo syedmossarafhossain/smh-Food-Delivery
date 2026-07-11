@@ -268,7 +268,15 @@ h4 {
     color: var(--gold-finger);
 }
 
-
+.arrow {
+    width: 2.5rem;
+    aspect-ratio: 1;
+    border-radius: 100vw;
+    background: var(--gold-finger);
+    color: var(--leed);
+    text-align: center;
+    line-height: 2.5rem;
+}
 
 
 /* FOOTER STYLING */
