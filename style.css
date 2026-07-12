@@ -291,7 +291,7 @@ h4 {
     width: 25rem;
 }
 
-.app-container h2 {
+.app-container .content h2 {
     font-size: 4.5rem;
 }
 
@@ -364,6 +364,15 @@ h4 {
 
     h2 {
         font-size: 3rem;
+    }
+
+    /* SECTION-4 */
+    .app-container {
+        padding: 2.2rem;
+    }    
+
+    .app-container .content h2 {
+        font-size: 3.5rem;
     }
 }
 
