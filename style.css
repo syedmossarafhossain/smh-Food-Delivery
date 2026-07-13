@@ -78,6 +78,10 @@ img {
     margin-top: .5rem;
 }
 
+.m-auto {
+    margin: auto;
+}
+
 /* HEADER STYLING */
 
 .navbar {
