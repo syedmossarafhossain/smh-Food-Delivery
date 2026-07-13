@@ -299,6 +299,30 @@ h4 {
     font-size: 4.5rem;
 }
 
+/* SECTION 5 */
+
+.input-container {
+    width: 45rem;
+    max-width: 100%;
+    background: var(--pure-white);
+    padding: .8rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 5px 8px ;
+    border-radius: 1rem;
+}
+
+input[type="email"] {
+    flex: 1;
+    height: 7vh;
+    background: transparent;
+    border: none;
+    font-size: 1.1rem;
+    padding-left: 1rem;
+}
+
+input[type="email"]:focus {
+    outline: none;
+}
+
 
 /* FOOTER STYLING */
 
@@ -379,4 +403,6 @@ h4 {
         font-size: 3.5rem;
     }
 }
+
+
 
