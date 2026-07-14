@@ -337,8 +337,16 @@ input[type="email"]:focus {
     background: var(--hint-yellow);
 }
 
+.footer-container .flex {
+    align-items: flex-start;
+}
+
 .footer-wrapper {
     flex: 1;
+}
+
+.footer-wrapper:nth-child(1) {
+    flex: 2;
 }
 
 .footer-wrapper .social-icon {
