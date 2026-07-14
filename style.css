@@ -82,7 +82,7 @@ img {
     margin: auto;
 }
 
-mt-one-half {
+.mt-one-half {
     margin-top: 1.5rem;
 }
 
@@ -341,7 +341,14 @@ input[type="email"]:focus {
     flex: 1;
 }
 
+.footer-wrapper .social-icon {
+    background: var(--pure-white);
+}
 
+.footer-wrapper .social-icon:hover {
+    background: var(--leed);
+    color: var(--pure-white);
+}
 
 
 
