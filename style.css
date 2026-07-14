@@ -82,6 +82,10 @@ img {
     margin: auto;
 }
 
+mt-one-half {
+    margin-top: 1.5rem;
+}
+
 /* HEADER STYLING */
 
 .navbar {
@@ -332,6 +336,12 @@ input[type="email"]:focus {
     padding-block: 4rem;
     background: var(--hint-yellow);
 }
+
+.footer-wrapper {
+    flex: 1;
+}
+
+
 
 
 
