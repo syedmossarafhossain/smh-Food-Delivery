@@ -351,6 +351,29 @@ input[type="email"]:focus {
 }
 
 
+.footer-link {
+    color: gray;
+    font-size: 1.1rem;
+}
+
+.footer-link:hover {
+    color: var(--leed);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
