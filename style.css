@@ -343,10 +343,12 @@ input[type="email"]:focus {
 
 .footer-wrapper {
     flex: 1;
+    flex-basis: 150px;
 }
 
 .footer-wrapper:nth-child(1) {
     flex: 2;
+    flex-basis: 300px;
 }
 
 .footer-wrapper .social-icon {
@@ -362,6 +364,7 @@ input[type="email"]:focus {
 .footer-link {
     color: gray;
     font-size: 1.1rem;
+    transition: .3s ease-in-out;
 }
 
 .footer-link:hover {
