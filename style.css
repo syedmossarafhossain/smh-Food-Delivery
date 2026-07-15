@@ -263,6 +263,7 @@ h4 {
 .cart-list {
     flex: 1;
     width: 100%;
+    margin-top: 1.5rem;
 }
 
 
@@ -288,6 +289,45 @@ h4 {
 .btn-container .btn:hover {
     background: var(--gold-finger);
     color: var(--leed);
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    padding: .7rem 1rem;
+    gap: 1rem;
+}
+
+.item .item-image img {
+    width: 5rem;
+}
+
+.item h4 {
+    font-size: 1.3rem;
+    color: var(--leed);
+}
+
+.item .item-total {
+    font-weight: 400;
+    margin-top: .3rem;
+}
+
+
+.quantity-btn {
+    background: var(--leed);
+    color: var(--pure-white);
+    width: 1.7rem;
+    aspect-ratio: 1;
+    border-radius: 100vw;
+    text-align: center;
+    line-height: 1.7rem;
+}
+
+
+.quantity-value {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-inline: .6rem;
 }
 
 
