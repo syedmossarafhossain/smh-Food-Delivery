@@ -43,3 +43,15 @@ const showCards = () => {
         cardList.appendChild(orderCard);
     })
 }
+
+const initApp = () => {
+
+    fetch('products.json').then
+        (response => response.json()).then
+        (data => {
+            productList = data;
+            showCards();
+        })
+}
+
+initApp();
