@@ -38,7 +38,7 @@ const showCards = () => {
         </div>
         <h4>${product.name}</h4>
         <h4 class="price">${product.price}</h4>
-        <a href="#" class="btn">Add to Cart</a>
+        <a href="#" class="btn card-btn">Add to Cart</a>
         `;
 
         cardList.appendChild(orderCard);
