@@ -98,12 +98,20 @@ const addToCart = (product) =>{
     const plusBtn = cartItem.querySelector('.plus');
     const quantityValue = cartItem.querySelector('.quantity-value');
     const itemTotal = cartItem.querySelector('.item-total');
+    const minusBtn = cartItem.querySelector('.minus');
 
     plusBtn.addEventListener('click', (e) =>{
         e.preventDefault();
         quantity++;
         quantityValue.textContent = quantity;
-        itemTotal.textContent = `$${price * quantity}`;
+        itemTotal.textContent = `$${(price * quantity).toFixed(2)}`;
+    })
+
+    minusBtn.addEventListener('click', (e) =>{
+        e.preventDefault();
+        quantity--;
+        quantityValue.textContent = quantity;
+        itemTotal.textContent = `$${(price * quantity).toFixed(2)}`;
     })
 
 
