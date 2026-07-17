@@ -67,6 +67,7 @@ const addToCart = (product) =>{
 
     cartProduct.push(product);
     let quantity = 1;
+    let price = parseFloat(product.price.replace('$',''))
 
     const cartItem = document.createElement('div');
     cartItem.classList.add('item');
@@ -96,11 +97,13 @@ const addToCart = (product) =>{
     
     const plusBtn = cartItem.querySelector('.plus');
     const quantityValue = cartItem.querySelector('.quantity-value');
+    const itemTotal = cartItem.querySelector('.item-total');
 
     plusBtn.addEventListener('click', (e) =>{
         e.preventDefault();
         quantity++;
         quantityValue.textContent = quantity;
+        itemTotal.textContent = `$${price * quantity}`;
     })
 
 
