@@ -80,11 +80,11 @@ const addToCart = (product) =>{
                 <h4 class="item-total">${product.price}</h4>
             </div>
             <div class="flex">
-                <a href="#" class="quantity-btn">
+                <a href="#" class="quantity-btn minus">
                     <i class="fa-solid fa-minus"></i>
                 </a>
                 <h4 class="quantity-value">1</h4>
-                <a href="#" class="quantity-btn">
+                <a href="#" class="quantity-btn plus">
                     <i class="fa-solid fa-plus"></i>
                 </a>
             </div>
