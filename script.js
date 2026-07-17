@@ -24,6 +24,7 @@ closeBtn.addEventListener('click', () => cartTab.classList.remove('cart-tab-acti
 // MENU
 
 let productList = [];
+let cartProduct = [];
 
 
 const showCards = () => {
@@ -56,6 +57,15 @@ const showCards = () => {
 
 // CART
 const addToCart = (product) =>{
+
+    const existingProduct = cartProduct.find(item => item.id === product.id);
+    if(existingProduct){
+
+        alert('Item already in your cart');
+        return;
+    }
+
+    cartProduct.push(product);
 
     const cartItem = document.createElement('div');
     cartItem.classList.add('item');
