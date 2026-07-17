@@ -109,9 +109,15 @@ const addToCart = (product) =>{
 
     minusBtn.addEventListener('click', (e) =>{
         e.preventDefault();
-        quantity--;
-        quantityValue.textContent = quantity;
-        itemTotal.textContent = `$${(price * quantity).toFixed(2)}`;
+        if(quantity >1 ){
+            quantity--;
+            quantityValue.textContent = quantity;
+            itemTotal.textContent = `$${(price * quantity).toFixed(2)}`;
+        }
+        else{
+            cartItem.remove();
+            cartProduct = cartProduct.filter(item => item.id !== product.id);
+        }
     })
 
 
