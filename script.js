@@ -66,6 +66,7 @@ const addToCart = (product) =>{
     }
 
     cartProduct.push(product);
+    let quantity = 1;
 
     const cartItem = document.createElement('div');
     cartItem.classList.add('item');
@@ -83,7 +84,7 @@ const addToCart = (product) =>{
                 <a href="#" class="quantity-btn minus">
                     <i class="fa-solid fa-minus"></i>
                 </a>
-                <h4 class="quantity-value">1</h4>
+                <h4 class="quantity-value">${quantity}</h4>
                 <a href="#" class="quantity-btn plus">
                     <i class="fa-solid fa-plus"></i>
                 </a>
@@ -92,9 +93,24 @@ const addToCart = (product) =>{
 
     cartList.appendChild(cartItem);
 
+    
+    const plusBtn = cartItem.querySelector('.plus');
+    const quantityValue = cartItem.querySelector('.quantity-value');
+
+    plusBtn.addEventListener('click', (e) =>{
+        e.preventDefault();
+        quantity++;
+        quantityValue.textContent = quantity;
+    })
 
 
 }
+
+
+
+
+
+
 
 const initApp = () => {
 
