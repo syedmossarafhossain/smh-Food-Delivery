@@ -16,6 +16,7 @@ const closeBtn = document.querySelector('.close-btn');
 const cardList = document.querySelector('.card-list');
 const cartList = document.querySelector('.cart-list');
 const cartTotal = document.querySelector('.cart-total');
+const cartValue = document.querySelector('.cart-value');
 
 
 cartIcon.addEventListener('click', () => cartTab.classList.add('cart-tab-active'));
@@ -29,17 +30,22 @@ let productList = [];
 let cartProduct = [];
 
 const updateTotals = () =>{
+    
     let totalPrice = 0;
+    let totalQuantity = 0;
 
     document.querySelectorAll('.item').forEach(item =>{
 
+        const quantity = parseInt(item.querySelector('.quantity-value').textContent);
         const price = parseFloat(item.querySelector('.item-total').textContent.replace('$',''));
         
         totalPrice += price;
+        totalQuantity += quantity;
     
     })
 
-    cartTotal.textContent = `$${totalPrice.toFixed(2)}`
+    cartTotal.textContent = `$${totalPrice.toFixed(2)}`;
+    cartValue.textContent = totalQuantity;
 }
 
 
