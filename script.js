@@ -17,10 +17,13 @@ const cardList = document.querySelector('.card-list');
 const cartList = document.querySelector('.cart-list');
 const cartTotal = document.querySelector('.cart-total');
 const cartValue = document.querySelector('.cart-value');
+const hamburger = document.querySelector('.hamburger');
+const mobileMenu = document.querySelector('.mobile-menu');
 
 
 cartIcon.addEventListener('click', () => cartTab.classList.add('cart-tab-active'));
 closeBtn.addEventListener('click', () => cartTab.classList.remove('cart-tab-active'));
+hamburger.addEventListener('click', () => mobileMenu.classList.toggle('mobile-menu-active'));
 
 
 
