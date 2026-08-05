@@ -71,3 +71,54 @@ onAuthStateChanged(auth, (user) => {
     }
 
 });
+
+
+getSignButtons().forEach(btn => {
+
+    btn.addEventListener("click", async (e) => {
+
+        e.preventDefault();
+
+        try {
+
+            if (auth.currentUser) {
+
+                await signOut(auth);
+
+                alert("Signed Out Successfully");
+
+            } else {
+
+                const result = await signInWithPopup(auth, provider);
+
+                const user = result.user;
+
+
+                const userData = {
+
+                    name: user.displayName,
+                    photo: user.photoURL,
+                    email: user.email
+
+                };
+
+
+                localStorage.setItem(
+                    "user",
+                    JSON.stringify(userData)
+                );
+
+
+                window.location.reload();
+
+            }
+
+        } catch (err) {
+
+            console.error(err);
+
+        }
+
+    });
+
+});
