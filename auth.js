@@ -43,3 +43,31 @@ function updateButtons(user) {
         }
     });
 }
+
+
+onAuthStateChanged(auth, (user) => {
+
+    updateButtons(user);
+
+    if (user) {
+
+        const userData = {
+            name: user.displayName,
+            photo: user.photoURL,
+            email: user.email
+        };
+
+
+        localStorage.setItem(
+            "user",
+            JSON.stringify(userData)
+        );
+
+    }
+    else {
+
+        localStorage.removeItem("user");
+
+    }
+
+});
