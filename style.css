@@ -141,6 +141,39 @@ img {
     display: none;
 }
 
+.profile-box {
+    position: relative;
+    cursor: pointer;
+}
+
+.user-photo {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--gold-finger);
+}
+
+.user-tooltip {
+    position: absolute;
+    top: 55px;
+    right: 0;
+    background: var(--leed);
+    color: white;
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+    font-size: .9rem;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s ease;
+}
+
+.profile-box:hover .user-tooltip {
+    opacity: 1;
+    visibility: visible;
+}
+
 /* SECTION STYLING */
 .hero-section {
     min-height: calc(100vh - 14vh);
