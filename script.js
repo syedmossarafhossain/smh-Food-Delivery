@@ -182,3 +182,28 @@ const initApp = () => {
 }
 
 initApp();
+
+// USER PROFILE
+const userPhoto = document.querySelector(".user-photo");
+const userTooltip = document.querySelector(".user-tooltip");
+
+
+function loadUserProfile(){
+
+    const savedUser = JSON.parse(localStorage.getItem("user"));
+
+
+    if(savedUser){
+
+        userPhoto.src = savedUser.photo;
+        userTooltip.textContent = savedUser.name;
+    }
+    else{
+
+        userPhoto.src = "images/blue.png";
+        userTooltip.textContent = "Guest";
+    }
+}
+
+loadUserProfile();
+
