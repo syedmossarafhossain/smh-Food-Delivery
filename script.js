@@ -31,12 +31,7 @@ hamburger.addEventListener('click', (e) => {
     bars.classList.toggle('fa-bars');
 });
 
-
-
-
-
 // MENU
-
 let productList = [];
 let cartProduct = [];
 
@@ -86,8 +81,6 @@ const showCards = () => {
         
     });
 }
-
-
 
 // CART
 const addToCart = (product) =>{
@@ -166,11 +159,6 @@ const addToCart = (product) =>{
 }
 
 
-
-
-
-
-
 const initApp = () => {
 
     fetch('products.json').then
@@ -207,3 +195,19 @@ function loadUserProfile(){
 
 loadUserProfile();
 
+// ADDRESS
+const addressContainer = document.querySelector(".address-container");
+const addressTitle = document.querySelector(".address-title");
+
+// Open / Close Popup
+addressTitle.addEventListener("click", (e) => {
+    e.stopPropagation();
+    addressContainer.classList.toggle("active");
+});
+
+// Close popup when clicking outside
+document.addEventListener("click", (e)=>{
+    if(!addressContainer.contains(e.target)){
+        addressContainer.classList.remove("active");
+    }
+});
