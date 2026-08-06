@@ -249,3 +249,23 @@ locationBtn.addEventListener("click", (e)=>{
         alert("Geolocation not supported");
     }
 });
+
+ // SAVE DELIVERY ADDRESS
+const saveAddressBtn = document.querySelector(".save-address-btn");
+const displayAddress = document.querySelector("#display-address");
+
+saveAddressBtn.addEventListener("click",()=>{
+    const address = addressBox.value.trim();
+    if(address){
+        displayAddress.textContent = address;
+        localStorage.setItem(
+            "deliveryAddress",
+            address
+        );
+
+        addressContainer.classList.remove("active");
+    }
+    else{
+        alert("Please enter address");
+    }
+});
