@@ -211,3 +211,41 @@ document.addEventListener("click", (e)=>{
         addressContainer.classList.remove("active");
     }
 });
+
+
+// CURRENT LOCATION
+const locationBtn = document.querySelector(".location-btn");
+const addressBox = document.querySelector("#user-address");
+
+locationBtn.addEventListener("click", (e)=>{
+    e.stopPropagation();
+    if(navigator.geolocation){
+        navigator.geolocation.getCurrentPosition(
+            async(position)=>{
+                const lat = position.coords.latitude;
+                const lon = position.coords.longitude;
+                try{
+                    const response = await fetch(
+                        `https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}`
+                    );
+                    
+                    const data = await response.json();
+                    addressBox.value = data.display_name;
+
+                }
+                catch(error){
+                    alert("Unable to get address");
+                }
+            },
+            ()=>{
+
+                alert("Location permission denied");
+            }
+        );
+    }
+
+    else{
+
+        alert("Geolocation not supported");
+    }
+});
