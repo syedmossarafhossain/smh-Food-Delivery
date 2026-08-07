@@ -176,23 +176,22 @@ const userPhoto = document.querySelector(".user-photo");
 const userTooltip = document.querySelector(".user-tooltip");
 
 
-function loadUserProfile(){
+function loadUserProfile() {
 
     const savedUser = JSON.parse(localStorage.getItem("user"));
 
+    if (savedUser) {
 
-    if(savedUser){
+        userPhoto.src = savedUser.photo || "images/user_defult.png";
+        userTooltip.textContent = savedUser.name || "User";
 
-        userPhoto.src = savedUser.photo;
-        userTooltip.textContent = savedUser.name;
-    }
-    else{
+    } else {
 
         userPhoto.src = "images/blue.png";
         userTooltip.textContent = "Guest";
+
     }
 }
-
 loadUserProfile();
 
 // ADDRESS
