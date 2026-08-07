@@ -73,43 +73,29 @@ getSignButtons().forEach(btn => {
         e.preventDefault();
 
         try {
-
             if (auth.currentUser) {
-
                 await signOut(auth);
-
                 alert("Signed Out Successfully");
 
             } else {
 
                 const result = await signInWithPopup(auth, provider);
-
                 const user = result.user;
-
-
                 const userData = {
-
                     name: user.displayName,
                     photo: user.photoURL,
                     email: user.email
-
                 };
-
 
                 localStorage.setItem(
                     "user",
                     JSON.stringify(userData)
                 );
-
-
-                window.location.reload();
-
+                updateButtons(user);
+                loadUserProfile();
             }
-
         } catch (err) {
-
             console.error(err);
-
         }
 
     });
