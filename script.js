@@ -269,3 +269,9 @@ saveAddressBtn.addEventListener("click",()=>{
         alert("Please enter address");
     }
 });
+
+// Load saved address
+const savedAddress = localStorage.getItem("deliveryAddress");
+if(savedAddress){
+    displayAddress.textContent = savedAddress;
+}
