@@ -56,20 +56,13 @@ onAuthStateChanged(auth, (user) => {
             photo: user.photoURL,
             email: user.email
         };
-
-
-        localStorage.setItem(
-            "user",
-            JSON.stringify(userData)
-        );
-
-    }
-    else {
+        localStorage.setItem("user", JSON.stringify(userData));
+        loadUserProfile();
+    } else {
 
         localStorage.removeItem("user");
-
+        loadUserProfile();
     }
-
 });
 
 
