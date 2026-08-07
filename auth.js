@@ -75,8 +75,10 @@ getSignButtons().forEach(btn => {
         try {
             if (auth.currentUser) {
                 await signOut(auth);
+                localStorage.removeItem("user");
+                updateButtons(null);
+                loadUserProfile();
                 alert("Signed Out Successfully");
-
             } else {
 
                 const result = await signInWithPopup(auth, provider);
@@ -87,10 +89,8 @@ getSignButtons().forEach(btn => {
                     email: user.email
                 };
 
-                localStorage.setItem(
-                    "user",
-                    JSON.stringify(userData)
-                );
+                localStorage.setItem("user", JSON.stringify(userData));
+
                 updateButtons(user);
                 loadUserProfile();
             }
