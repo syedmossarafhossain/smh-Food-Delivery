@@ -22,7 +22,7 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
 
-const signBtns = document.querySelectorAll(".desktop-action .btn, .mobile-menu .btn");
+const signBtns = document.querySelectorAll(".sign-in-btn");
 
 function getSignButtons() {
     return [...signBtns];
